@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://d0noipaunlgmr"
+
+[deps]
+
+files=["res://others/csv/newcsv..translation", "res://others/csv/newcsv..translation", "res://others/csv/newcsv..translation"]
+
+source_file="res://others/csv/newcsv.csv"
+dest_files=["res://others/csv/newcsv..translation", "res://others/csv/newcsv..translation", "res://others/csv/newcsv..translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://8kdf40dsxf7k"]
+[gd_scene load_steps=2 format=3 uid="uid://8kdf40dsxf7k"]
+
+[ext_resource type="Script" path="res://SongG/Core/main.gd" id="1_x0dqj"]
 
 [node name="Core" type="Node"]
+script = ExtResource("1_x0dqj")

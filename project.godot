@@ -21,7 +21,7 @@ Global="*res://SongG/Core/Global.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csvsupport/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 

@@ -11,8 +11,10 @@ class_name ICommand
 func bind(target,signal_str:String):
 	target.connect(signal_str,Callable(self,"exec"))
 
-func bindv():
-	pass
+func bindv(target,signal_str:String,args:Array):
+	var exec_callv = Callable(self,"execv")
+	exec_callv.bindv(args)
+	target.connect(signal_str,exec_callv)
 
 func exec():pass
 

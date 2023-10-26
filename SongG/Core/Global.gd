@@ -13,7 +13,7 @@ var view    : Dictionary
 
 #
 func get_utility(utility_name):
-	if utility.has(utility):
+	if utility.has(utility_name):
 		return utility[utility_name]
 	return null
 
@@ -33,7 +33,7 @@ func add_model(model_name,new_model:IModel):
 
 #
 func get_system(system_name):
-	if system.has(system):
+	if system.has(system_name):
 		return system[system_name]
 	return null
 

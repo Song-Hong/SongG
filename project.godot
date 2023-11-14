@@ -11,19 +11,26 @@ config_version=5
 [application]
 
 config/name="SongG"
-run/main_scene="res://addons/csvsupport/scenes/csvPreview.tscn"
+run/main_scene="res://scenes/core.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
+run/low_processor_mode=true
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
-[autoload]
+[display]
 
-Global="*res://SongG/Core/Global.gd"
+window/size/resizable=false
+window/size/transparent=true
+window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/songgmanager/plugin.cfg")
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+viewport/transparent_background=true

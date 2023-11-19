@@ -7,8 +7,7 @@
 extends IMoudle
 class_name Scene
 static var init:Scene
-func _init():
-	init = self
+func _init():init = self
 
 var scenes:Dictionary
 

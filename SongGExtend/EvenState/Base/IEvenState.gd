@@ -3,9 +3,8 @@ class_name IEvenState
 
 signal finshed #当组件任务结束时
 signal destory #当组件结束删除时
-signal process #组件订阅更新
 
-var scene
+var scene      #场景组件
 
 #初始化
 func start():pass
@@ -23,11 +22,11 @@ func showAnimation(tween:Tween):
 	tween.tween_property(scene, "scale", Vector2(1, 1), 0.02)
 
 #显示移动动画
-func showMoveAnimation(startpo,endpo,tween:Tween):pass
+func showMoveAnimation(_startpo,_endpo,_tween:Tween):pass
 
 #显示删除动画
 func destoryAnimation(tween:Tween)->Tween:
-	tween.tween_property(scene,"scale",Vector2(0.1,0.1),0.5)
+	tween.tween_property(scene,"scale",Vector2(0.1,0.1),0.3)
 	return tween
 
 #睡眠

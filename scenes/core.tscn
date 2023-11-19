@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://8kdf40dsxf7k"]
 
 [ext_resource type="Script" path="res://SongG/Moudle/CoreModule.gd" id="1_dnkp2"]
-[ext_resource type="Script" path="res://SongG/Moudle/ProcessSystem.gd" id="2_ch787"]
-[ext_resource type="Script" path="res://SongG/Moudle/ServerController.gd" id="3_vtp8w"]
+[ext_resource type="Script" path="res://SongG/Moudle/ProcessModule.gd" id="2_25j0t"]
+[ext_resource type="Script" path="res://SongGExtend/Server/Moudle/ServerModule.gd" id="3_g3vr1"]
 [ext_resource type="Script" path="res://SongG/Moudle/SceneMoudle.gd" id="4_1tbw6"]
-[ext_resource type="Script" path="res://SongG/Moudle/TipController.gd" id="5_jrrkj"]
+[ext_resource type="Script" path="res://SongGExtend/Tip/Moudle/TipMoudle.gd" id="5_14563"]
 [ext_resource type="Script" path="res://SongGExtend/StatusBar/Module/StatusBarMoudle.gd" id="6_ba0lg"]
 [ext_resource type="Script" path="res://SongGExtend/EvenState/Moudle/EvenStateMoudle.gd" id="7_mcwdj"]
 [ext_resource type="Script" path="res://SongG/View/SceneMoudleView.gd" id="7_qc1aw"]
-[ext_resource type="Script" path="res://SongG/View/TipsMoudleView.gd" id="8_j3t5c"]
+[ext_resource type="Script" path="res://SongGExtend/Tip/View/TipsMoudleView.gd" id="9_luoyl"]
 [ext_resource type="Script" path="res://SongGExtend/StatusBar/View/StatusBarView.gd" id="10_vsy32"]
 [ext_resource type="Script" path="res://SongGExtend/EvenState/View/EvenStateView.gd" id="11_axupp"]
 
@@ -27,16 +27,16 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_dnkp2")
 
 [node name="ProcessMoudle" type="Node" parent="Moudle"]
-script = ExtResource("2_ch787")
+script = ExtResource("2_25j0t")
 
 [node name="ServerMoudle" type="Node" parent="Moudle"]
-script = ExtResource("3_vtp8w")
+script = ExtResource("3_g3vr1")
 
 [node name="SceneMoudle" type="Node" parent="Moudle"]
 script = ExtResource("4_1tbw6")
 
 [node name="TipMoudle" type="Node" parent="Moudle"]
-script = ExtResource("5_jrrkj")
+script = ExtResource("5_14563")
 
 [node name="StatusBarMoudle" type="Node" parent="Moudle"]
 script = ExtResource("6_ba0lg")
@@ -58,10 +58,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ev0f4")
 script = ExtResource("7_qc1aw")
 
 [node name="Tips" type="Node" parent="Scenes/UI"]
-script = ExtResource("8_j3t5c")
-
-[node name="StatusBar" type="Node" parent="Scenes/UI"]
-script = ExtResource("10_vsy32")
+script = ExtResource("9_luoyl")
 
 [node name="EvenState" type="Node" parent="Scenes/UI"]
 script = ExtResource("11_axupp")
+
+[node name="StatusBar" type="Node" parent="Scenes/UI"]
+script = ExtResource("10_vsy32")

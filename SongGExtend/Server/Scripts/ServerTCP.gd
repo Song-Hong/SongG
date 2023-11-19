@@ -4,24 +4,24 @@
 # author : Song
 # time   : 2023/10/31 18:16
 #############################################
-extends Node
-class_name ServerMoudle_TCP
+extends IServer
+class_name ServerTCP
 
+#信号
 signal receive_data #当接受到消息时
 signal disconnect   #当从服务器断开时
 
-#var client:StreamPeerTCP
+#服务器
 var client:StreamPeerTCP
-var isconnect=false
-#var tcp_thread:Thread
+
+#是否连接成功
+var isconnect=false #是否连接
 
 func connect_server():
 	client = StreamPeerTCP.new()
-	#var info = Global.get_model("serverinfo")
-	#if client.connect_to_host(info.ip,info.port)==OK:
-		#isconnect = true
-		#tcp_thread = Thread.new()
-		#tcp_thread.start(Callable(self,"listener"),Thread.PRIORITY_LOW)
+	if client.connect_to_host(host,port)==OK:
+		isconnect = true
+		Server.init.update.connect(Callable(self,"listener"))
 
 func send_data(data:String):
 	client.poll()
@@ -53,8 +53,5 @@ func dislistener():
 	isconnect = false
 	client.disconnect_from_host()
 	disconnect.emit()
-
-func disconnect_server():
-	dislistener()
 
 

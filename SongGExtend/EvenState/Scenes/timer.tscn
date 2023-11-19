@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://bylpd6qykn7gq"]
 
+[ext_resource type="Theme" uid="uid://dxu4ylxcaosr7" path="res://SongGExtend/EvenState/Styles/def.tres" id="1_8l6lj"]
 [ext_resource type="Texture2D" uid="uid://cik6yg0s5i8gk" path="res://SongGExtend/EvenState/Icons/Timer.svg" id="1_ddnk7"]
-[ext_resource type="Theme" uid="uid://dxu4ylxcaosr7" path="res://SongGExtend/EvenState/Styles/timer.tres" id="1_yvmvd"]
 
 [node name="timer" type="Button"]
 clip_contents = true
 offset_right = 60.0
 offset_bottom = 22.0
 focus_mode = 0
-theme = ExtResource("1_yvmvd")
+theme = ExtResource("1_8l6lj")
 
 [node name="icon" type="TextureRect" parent="."]
 modulate = Color(0.992157, 0.470588, 0.223529, 1)

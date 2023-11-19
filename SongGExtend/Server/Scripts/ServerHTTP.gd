@@ -4,7 +4,7 @@
 # author : Song
 # time   : 2023/11/09 21:09
 #############################################
-extends Node
+extends IServer
 class_name ServerMoudle_HTTP
 
 func connect_server():

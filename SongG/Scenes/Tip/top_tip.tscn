@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://brkpxql48uul3"]
-
-[node name="top_tip" type="Panel"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 40.0
-grow_horizontal = 2

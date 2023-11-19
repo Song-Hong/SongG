@@ -3,6 +3,8 @@ class_name EvenState
 static var init:EvenState
 func _init():init = self
 
+signal update
+
 var even_states:Array[IEvenState]
 var width = 80
 var area
@@ -11,18 +13,16 @@ func create(evenState:IEvenState):
 	if !area:
 		area = SongG.get_view("EvenState")
 	even_states.append(evenState)
-	var scene  = evenState.start()
+	evenState.start()
 	evenState.connect("destory",Callable(self,"on_destory"))
-	var w = scene.size.x
-	var h = scene.size.y
-	area.add_child(scene)
-	scene.position = Vector2(width+10,8)
+	var w = evenState.scene.size.x
+	area.add_child(evenState.scene)
+	evenState.scene.position = Vector2(width+10,8)
 	width += w +10
 	evenState.showAnimation(get_tree().create_tween())
 
 func _process(delta):
-	for even_state in even_states:
-		even_state.process.emit(delta)
+	update.emit(delta)
 	
 func on_destory(evenState:IEvenState):
 	await evenState.destoryAnimation(get_tree().create_tween()).finished
@@ -39,3 +39,11 @@ func sort_even_states():
 		tween.tween_property(even_state.scene,"position",Vector2(width+12,8) ,0.3+i)
 		width += even_state.scene.size.x +10
 		i+=0.04
+
+#刷新
+func reload():
+	width = 80
+	for even_state in even_states:
+		var vec = Vector2(width,8)
+		even_state.scene.position = vec
+		width += even_state.scene.size.x +10

@@ -1,9 +1,9 @@
+Panel
+Control
+Button
 Label
 TextureRect
 RichTextLabel
-Button
-Control
-Panel
 PanelContainer
 Node
 ItemList

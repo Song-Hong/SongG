@@ -17,7 +17,7 @@ func start():
 	lable = scene.get_child(1)
 	Thread.new().start(Callable(self,"timer"))
 
-func on_process(delta):
+func on_process(_delta):
 	covter2String()
 
 func timer():
@@ -35,9 +35,9 @@ func covter2String():
 		finshed.emit()
 		destory.emit(self)
 		
-func time2str2(time:int)->String:
-	var t = str(time) 
-	if time == 0:
+func time2str2(_time:int)->String:
+	var t = str(_time) 
+	if _time == 0:
 		t = "00"
 	elif len(t) < 2:
 		t = "0"+t

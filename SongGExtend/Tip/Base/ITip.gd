@@ -6,6 +6,7 @@ signal destory
 
 #场景
 var scene
+var drag_area
 
 #Tips设置
 var can_move = true     #窗口是否可以移动
@@ -16,10 +17,11 @@ var isdown    = false   #检测鼠标是否按下
 var offset              #偏移值
 
 func init():
-	if can_move:
-		if has_signal("button_down") and has_signal("button_up"):
-			connect("button_down",Callable(self,"_on_button_down"))
-			connect("button_up",Callable(self,"_on_button_up"))
+	if can_move && drag_area != null:
+		if drag_area.has_signal("button_down") and drag_area.has_signal("button_up"):
+			drag_area.connect("button_down",Callable(self,"_on_button_down"))
+			drag_area.connect("button_up",Callable(self,"_on_button_up"))
+			drag_area.connect("gui_input",Callable(self,"_input"))
 	if close_time > 0:
 		Tip.init.update.connect(Callable(self,"update"))
 		Thread.new().start(Callable(self,"waitClose"))
@@ -27,7 +29,7 @@ func init():
 ##regin 窗口的移动操作
 #当鼠标按下时候,开始跟手
 func _on_button_down():
-	offset = get_global_mouse_position() - position
+	offset = drag_area.get_global_mouse_position() - scene.position
 	isdown = true
 
 #当鼠标抬起时,停止跟手
@@ -37,7 +39,7 @@ func _on_button_up():
 #当鼠标按下时,持续跟手操作
 func _input(_event):
 	if isdown:
-		position = get_global_mouse_position()-offset
+		scene.position = drag_area.get_global_mouse_position()-offset
 ##endregin
 
 ##regin 用户可扩展方法

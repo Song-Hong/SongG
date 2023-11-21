@@ -2,7 +2,7 @@
 
 Godot 开发工具包
 
-#### core Moudle
+#### Core Moudle
 
 | CoreMoudle    | 核心模块,负责初始化     | Core module, responsible for initialization         |
 | ------------- | ----------------------- | --------------------------------------------------- |

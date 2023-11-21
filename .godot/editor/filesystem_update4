@@ -1,12 +1,1 @@
-res://SongG/Process/SongGProcess.gd
-res://SongGExtend/Tip/Scripts/TipPanel.gd
-res://SongGExtend/EvenState/Moudle/EvenStateMoudle.gd
-res://SongGExtend/Tip/Scripts/TipShort.gd
-res://scenes/core.tscn
-res://SongGExtend/EvenState/Styles/def.tres
-res://SongGExtend/Tip/View/TipsMoudleView.gd
-res://SongGExtend/Tip/Scenes/TipShort.tscn
-res://SongGExtend/EvenState/Scenes/timer.tscn
-res://SongGExtend/EvenState/Scenes/tip.tscn
-res://SongGExtend/Tip/Scenes/TipPanel.tscn
-res://SongGExtend/Tip/Styles/TipPanel.tres
+res://SongGExtend/Server/Scripts/ServerTCP.gd

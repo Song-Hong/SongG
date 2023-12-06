@@ -1,1 +1,9 @@
-res://SongGExtend/Server/Scripts/ServerTCP.gd
+res://scenes/core.tscn
+res://SongGExtend/Tip/View/TipsMoudleView.gd
+res://SongGExtend/EvenState/Styles/def.tres
+res://SongGExtend/Tip/Styles/TipPanel.tres
+res://SongG/Process/SongGProcess.gd
+res://SongG/Core/CommandArray.gd
+res://SongG/Base/IModel.gd
+res://SongG/Base/IView.gd
+res://SongG/Core/SongG.gd

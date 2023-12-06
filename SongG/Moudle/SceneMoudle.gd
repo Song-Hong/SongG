@@ -37,6 +37,16 @@ func remove_scene(scene_name):
 func name_to_path(scene_name:String)->String:
 	return "res://scenes/%s.tscn"%scene_name
 
+#加载场景,并添加至场景列表中
+func load_scene_to_scenes(scene_name:String):
+	var path = name_to_path(scene_name)
+	if FileAccess.file_exists(path):
+		var scene = load(path).instantiate()
+		scenes[scene_name] = scene
+		return scene
+	else:
+		return null
+
 #加载场景
 func load_scene(scene_name:String):
 	var path = name_to_path(scene_name)

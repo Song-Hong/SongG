@@ -15,3 +15,7 @@ static func set_view(view_name:String,view:IView)->void:
 		return
 	else:
 		views[view_name] = view
+
+static func remove_view(view_name:String)->void:
+	if views.has(view_name):
+		views.erase(view_name)

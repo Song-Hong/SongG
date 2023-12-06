@@ -36,6 +36,7 @@ func on_receive_data():
 		var s = _temp_bytes.get_string_from_utf8()
 		receive_data.emit(s)
 
+
 func listener():
 	client.poll()
 	var status = client.get_status()
@@ -53,5 +54,3 @@ func dislistener():
 	isconnect = false
 	client.disconnect_from_host()
 	disconnect.emit()
-
-

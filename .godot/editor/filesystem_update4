@@ -1,9 +1,9 @@
-res://scenes/core.tscn
+res://SongG/scenes/core.tscn
 res://SongGExtend/Tip/View/TipsMoudleView.gd
-res://SongGExtend/EvenState/Styles/def.tres
-res://SongGExtend/Tip/Styles/TipPanel.tres
-res://SongG/Process/SongGProcess.gd
-res://SongG/Core/CommandArray.gd
-res://SongG/Base/IModel.gd
-res://SongG/Base/IView.gd
-res://SongG/Core/SongG.gd
+res://SongG/SongGExtend/EvenState/Styles/def.tres
+res://SongG/SongGExtend/EvenState/Scripts/EvenStateTimer.gd
+res://SongG/SongGExtend/EvenState/Scripts/EvenStateTip.gd.gd
+res://SongG/SongGExtend/StatusBar/Module/StatusBarMoudle.gd
+res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
+res://SongG/SongGExtend/Tip/Scripts/TipPanel.gd
+res://SongG/SongGExtend/Tip/Scripts/TipShort.gd

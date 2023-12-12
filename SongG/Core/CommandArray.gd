@@ -21,10 +21,10 @@ func exec_command():
 		self.all_finshed.emit()
 		return
 	now_command = commands[0]
-	now_command.start()
 	Commands.init.update.connect(Callable(now_command, "update"))
 	now_command.error.connect(Callable(self, "exec_error"))
 	now_command.finshed.connect(Callable(self, "exec_finshed"))
+	now_command.start()
 
 #当前命令允许完成
 func exec_finshed():

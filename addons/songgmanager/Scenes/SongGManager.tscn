@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://da0rax0igvqoc"]
+
+[ext_resource type="Theme" uid="uid://v3vmeu7qcb2g" path="res://addons/songgmanager/Others/style/SongG.tres" id="1_dlif6"]
+[ext_resource type="Script" path="res://addons/songgmanager/Scripts/Core/SongG.gd" id="2_nh2o0"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_w1cu8"]
+
+[node name="SongGProcessManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_dlif6")
+script = ExtResource("2_nh2o0")
+
+[node name="LeftPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+offset_right = 70.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+theme_type_variation = &"LeftPanel"
+
+[node name="SongGName" type="Label" parent="LeftPanel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 58.0
+offset_bottom = 34.0
+theme_type_variation = &"SongGName"
+theme_override_font_sizes/font_size = 13
+text = "SongG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tools" type="VBoxContainer" parent="LeftPanel"]
+layout_mode = 1
+offset_top = 60.0
+offset_right = 70.0
+offset_bottom = 648.0
+
+[node name="Universal" type="MarginContainer" parent="LeftPanel/Tools"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="UniversalBtn" type="Button" parent="LeftPanel/Tools/Universal"]
+custom_minimum_size = Vector2(68, 26)
+layout_mode = 2
+theme_type_variation = &"ToolsButton"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_w1cu8")
+text = "通用"
+
+[node name="Process" type="MarginContainer" parent="LeftPanel/Tools"]
+layout_mode = 2
+theme_override_constants/margin_right = 2
+
+[node name="ProcessBtn" type="Button" parent="LeftPanel/Tools/Process"]
+custom_minimum_size = Vector2(68, 26)
+layout_mode = 2
+theme_type_variation = &"ToolsButton"
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_w1cu8")
+text = "流程
+"
+
+[node name="ContentPanel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 70.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_type_variation = &"ContentPanel"
+
+[node name="Finite" type="Node" parent="."]

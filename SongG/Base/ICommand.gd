@@ -9,8 +9,9 @@ signal error
 var command_name
 
 #可重写方法
-func start():pass #当命令开始时
-func finsh():pass #当任务结束时
+func start():pass        #当命令开始时
+func exit():pass         #当任务结束时
+func update(_delta):pass #任务进行中
 
 #快捷方法
 func exec_finshed() : finshed.emit() #运行完成

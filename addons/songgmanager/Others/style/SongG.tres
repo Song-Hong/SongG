@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://v3vmeu7qcb2g"]
+
+[ext_resource type="FontFile" uid="uid://demss74a2qbfe" path="res://SongG/Others/Fonts/SourceHanSansCN-Heavy.otf" id="1_6hhr0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5kdg"]
+bg_color = Color(0.341176, 0.341176, 0.341176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pedw"]
+bg_color = Color(0.145098, 0.168627, 0.207843, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1han4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhu8i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyxtl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jta8t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dd23"]
+bg_color = Color(0.301961, 0.301961, 0.301961, 1)
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+
+[resource]
+ContentPanel/base_type = &"Panel"
+ContentPanel/styles/panel = SubResource("StyleBoxFlat_q5kdg")
+LeftPanel/base_type = &"Panel"
+LeftPanel/styles/panel = SubResource("StyleBoxFlat_3pedw")
+SongGName/base_type = &"Label"
+SongGName/font_sizes/font_size = 13
+SongGName/fonts/font = ExtResource("1_6hhr0")
+ToolsButton/base_type = &"Button"
+ToolsButton/colors/font_color = Color(0.592157, 0.592157, 0.592157, 1)
+ToolsButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+ToolsButton/font_sizes/font_size = 10
+ToolsButton/fonts/font = ExtResource("1_6hhr0")
+ToolsButton/styles/disabled = SubResource("StyleBoxEmpty_1han4")
+ToolsButton/styles/focus = SubResource("StyleBoxEmpty_mhu8i")
+ToolsButton/styles/hover = SubResource("StyleBoxEmpty_dyxtl")
+ToolsButton/styles/normal = SubResource("StyleBoxEmpty_jta8t")
+ToolsButton/styles/pressed = SubResource("StyleBoxFlat_2dd23")

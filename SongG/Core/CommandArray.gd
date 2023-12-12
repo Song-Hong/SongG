@@ -21,14 +21,18 @@ func exec_command():
 		self.all_finshed.emit()
 		return
 	now_command = commands[0]
-	commands[0].start()
-	commands[0].finshed.connect(Callable(self, "exec_finshed"))
-	commands[0].error.connect(Callable(self, "exec_error"))
+	now_command.start()
+	Commands.init.update.connect(Callable(now_command, "update"))
+	now_command.error.connect(Callable(self, "exec_error"))
+	now_command.finshed.connect(Callable(self, "exec_finshed"))
 
 #当前命令允许完成
 func exec_finshed():
 	if now_command != null:
-		now_command.finsh()
+		now_command.exit()
+	Commands.init.update.disconnect(Callable(now_command, "update"))
+	now_command.error.disconnect(Callable(self, "exec_error"))
+	now_command.finshed.disconnect(Callable(self, "exec_finshed"))
 	commands.erase(now_command)
 	exec_command()
 

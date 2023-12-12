@@ -1,4 +1,4 @@
-extends IMoudle
+extends IModule
 class_name StatusBar
 static var init:StatusBar
 func _init():init = self

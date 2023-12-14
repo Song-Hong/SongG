@@ -18,7 +18,7 @@ func start():
 func exec_command():
 	if commands.size() == 0:
 		now_command = null
-		self.all_finshed.emit()
+		self.all_finshed.emit(self)
 		return
 	now_command = commands[0]
 	Commands.init.update.connect(Callable(now_command, "update"))

@@ -1,3 +1,7 @@
+##
+# 逻辑层
+# 流程模块,让游戏运行更具有条例性
+##
 extends Node
 class_name IProcess
 

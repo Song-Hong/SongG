@@ -1,7 +1,11 @@
+## 
+# 逻辑层
+# 状态机的状态
+##
 extends Node
 class_name IState
 
-var finite:IFinite
+var finite:Finite
 
 func on_enter()            :pass
 func on_stay(_delta)       :pass

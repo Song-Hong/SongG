@@ -1,3 +1,7 @@
+##
+# 串行命令集合
+# 负责顺序处理命令集
+##
 extends Node
 class_name CommandArray
 
@@ -8,7 +12,9 @@ var array_name  : String
 var commands    : Array[ICommand]
 var now_command : ICommand
 
-func append(command:ICommand):
+#添加命令
+func append(command:ICommand,command_name=""):
+	command.command_name = command_name
 	commands.append(command)
 
 func start():
@@ -38,4 +44,11 @@ func exec_finshed():
 
 #运行错误,打断后续运行,清空当前命令集
 func exec_error():
+	clear()
 	error.emit()
+
+
+func clear():
+	if Commands.init.update.is_connected(Callable(now_command, "update")):
+		Commands.init.update.disconnect(Callable(now_command, "update"))
+	commands.clear()

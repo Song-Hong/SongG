@@ -1,5 +1,9 @@
+##
+# 逻辑层
+# 状态机父类
+##
 extends Node
-class_name IFinite
+class_name Finite
 
 signal state_change_start
 signal state_change_end

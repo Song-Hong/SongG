@@ -1,2 +1,5 @@
-res://SongG/SongGExtend/Window/Module/WindowModule.gd
+res://SongG/Base/ICommand.gd
+res://SongG/Core/MultiCommandArray.gd
 res://SongG/Core/CommandArray.gd
+res://SongG/Module/CommandsModule.gd
+res://SongG/Module/CoreModule.gd

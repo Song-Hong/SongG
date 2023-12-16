@@ -1,3 +1,7 @@
+##
+# 逻辑层
+# 负责分离操作 (适用于自动化)
+##
 extends Node
 class_name ICommand
 

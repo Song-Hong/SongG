@@ -1,5 +1,3 @@
-res://SongG/Base/ICommand.gd
-res://SongG/Core/MultiCommandArray.gd
-res://SongG/Core/CommandArray.gd
-res://SongG/Module/CommandsModule.gd
-res://SongG/Module/CoreModule.gd
+res://addons/songgmanager/Scenes/SongGManager.tscn
+res://addons/songgmanager/Others/style/SongG.tres
+res://addons/songgmanager/Scripts/Core/SongG.gd

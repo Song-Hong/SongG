@@ -1,3 +1,5 @@
+<img src="./SongG/Others/Logo/logo.svg">
+
 # SongG
 
 Godot 开发工具包

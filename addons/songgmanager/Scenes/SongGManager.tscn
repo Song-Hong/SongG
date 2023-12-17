@@ -36,7 +36,7 @@ grow_horizontal = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_type_variation = &"SongGName"
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "SongG"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -60,7 +60,7 @@ layout_mode = 2
 theme_override_constants/margin_right = 2
 
 [node name="UniversalBtn" type="Button" parent="LeftPanel/MarginContainer/Tools/Universal"]
-custom_minimum_size = Vector2(102, 39)
+custom_minimum_size = Vector2(153, 58.5)
 layout_mode = 2
 theme_type_variation = &"ToolsButton"
 theme_override_font_sizes/font_size = 24
@@ -74,7 +74,7 @@ layout_mode = 2
 theme_override_constants/margin_right = 2
 
 [node name="ProcessBtn" type="Button" parent="LeftPanel/MarginContainer/Tools/Process"]
-custom_minimum_size = Vector2(102, 39)
+custom_minimum_size = Vector2(153, 58.5)
 layout_mode = 2
 theme_type_variation = &"ToolsButton"
 theme_override_font_sizes/font_size = 24

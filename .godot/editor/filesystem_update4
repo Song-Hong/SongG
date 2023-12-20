@@ -19,3 +19,4 @@ res://SongG/SongGExtend/StatusBar/Module/StatusBarMoudle.gd
 res://SongG/SongGExtend/Tip/Module/TipModule.gd
 res://SongG/Module/ProcessModule.gd
 res://SongG/Module/BlackboardModule.gd
+res://SongG/Module/EventModule.gd

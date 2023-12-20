@@ -1,9 +1,9 @@
-#############################################
-# de_zh  : 
-# de_en  : 
-# author : Song
-# time   : 2023/10/29 16:00
-#############################################
+##
+# type   : 模块
+# de_zh  : 场景管理模块
+# author : HongSong
+# time   : 2023/12/20 13:00
+##
 extends IModule
 class_name Scene
 static var init:Scene
@@ -15,7 +15,7 @@ var scenes:Dictionary
 func add_scene(scene_name):
 	if scenes.has(scene_name): return
 	var scene = load_scene(scene_name)
-	SongG.get_view("ViewArea").add_child(scene)
+	Blackboard.init.get_data("ViewArea").add_child(scene)
 	scenes[scene_name] = scene
 
 #获取场景
@@ -28,7 +28,7 @@ func get_scene(scene_name):
 #删除场景
 func remove_scene(scene_name):
 	if scenes.has(scene_name): 
-		SongG.get_view("ViewArea").remove_child(scenes[scene_name])
+		Blackboard.init.get_data("ViewArea").remove_child(scenes[scene_name])
 		scenes.erase(scene_name)
 	else:
 		return null

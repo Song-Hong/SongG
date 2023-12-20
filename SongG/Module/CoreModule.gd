@@ -1,13 +1,21 @@
+##
+# type   : 模块
+# de_zh  : 核型模块,负责管理全部模块
+# author : HongSong
+# time   : 2023/12/20 15:48
+##
 extends IModule
 class_name Core
 static var init:Core
 func _init():init = self
 
+#更新信号
+signal update
+
+#软件的入口
 func _ready():
 	Process.init.change_process(SongGProcess.new())
 
-func set_window_size(wnd_size:Vector2i):
-	get_window().size = wnd_size
-
-func set_window_position():
-	get_window().position = Vector2i(0, 0)
+#更新
+func _process(delta):
+	update.emit(delta)

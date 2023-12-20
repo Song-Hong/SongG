@@ -10,7 +10,7 @@ var win_status = "res://SongG/SongGExtend/StatusBar/Scenes/winStatus.tscn"
 
 #显示状态栏
 func show_stauts():
-	var window = SongG.get_view("StatusBar")
+	var window = Blackboard.init.get_data("StatusBar")
 	var scene
 	if OS.get_name() == "macOS":
 		scene = load(mac_status).instantiate()

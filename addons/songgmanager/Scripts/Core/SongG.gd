@@ -2,7 +2,11 @@
 @tool
 extends Control
 
+#状态机
 var SongGState:Finite
+var wnd_size
+var area
+var zoom
 
 func _ready():
 	init_window()          #初始化窗口尺寸
@@ -16,16 +20,18 @@ func _process(delta):
 
 #初始化窗口尺寸
 func init_window():
+	wnd_size              = DisplayServer.screen_get_size(DisplayServer.MAIN_WINDOW_ID)
+	zoom                  = wnd_size.x/1920.0
+	area                  = get_child(1)
 	var width             = size.x
 	var height            = size.y
-	var wnd_size          = DisplayServer.screen_get_size(DisplayServer.MAIN_WINDOW_ID)
-	var zoom              = Vector2(wnd_size.x/1920.0,wnd_size.y/1080.0)
-	var left_panel_width  = 80*zoom.x
+	var left_panel_width  = 80*zoom
 	get_child(0).size     = Vector2(left_panel_width,height)
 	get_child(1).size     = Vector2(width-left_panel_width,height)
 	get_child(0).position = Vector2(0,0)
 	get_child(1).position = Vector2(left_panel_width,0)
-
+	
+	
 
 #显示默认窗口
 func show_default_window():
@@ -36,6 +42,7 @@ func show_default_window():
 func init_state():
 	SongGState = Finite.new(self)
 	SongGState.add_state("ProcessManager",SongG_PM_Init.new())
+	SongGState.add_state("UniversalManager",SongG_UM_Init.new())
 	SongGState.start("ProcessManager")
 
 #绑定按钮事件
@@ -49,11 +56,10 @@ func bind_btn_event():
 #显示通用窗口
 func show_universal_window():
 	clear_content()
-	print("显示通用窗口")
+	SongGState.change_state("UniversalManager")
 
 #显示流程窗口
 func show_process_window():
-	print("显示流程窗口")
 	clear_content()
 	SongGState.change_state("ProcessManager")
 

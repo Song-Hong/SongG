@@ -1,6 +1,6 @@
 #窗口初始化
 @tool
-extends IState
+extends AState
 class_name SongG_PM_Init
 
 var area

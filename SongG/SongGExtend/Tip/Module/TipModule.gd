@@ -18,7 +18,7 @@ func _process(delta):
 
 func create_tip(tip:ITip):
 	if !area:
-		area = SongG.get_view("Tips")
+		area = Blackboard.init.get_data("Tips")
 	tip.init()
 	tip.showTip()
 	tip.connect("destory",Callable(self,"on_destory"))

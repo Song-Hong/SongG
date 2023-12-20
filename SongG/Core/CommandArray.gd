@@ -1,22 +1,38 @@
 ##
-# 串行命令集合
-# 负责顺序处理命令集
+# type   : class
+# de_zh  : 命令集
+# author : HongSong
+# time   : 2023/12/20 15:50
 ##
 extends Node
 class_name CommandArray
 
+#全部执行完毕
 signal all_finshed
+#执行错误
 signal error
 
+#集合名称
 var array_name  : String
-var commands    : Array[ICommand]
-var now_command : ICommand
+#命令集合
+var commands    : Array[ACommand]
+#当前执行的命令
+var now_command : ACommand
+
+#快速添加
+func Q(commands_name:String,commands:Array[ACommand],end_call=null):
+	array_name = commands_name
+	for command in commands:
+		append(command)
+	if end_call != null:
+		end_call.call()
 
 #添加命令
-func append(command:ICommand,command_name=""):
+func append(command:ACommand,command_name=""):
 	command.command_name = command_name
 	commands.append(command)
 
+#开始命令集
 func start():
 	exec_command()
 
@@ -47,7 +63,7 @@ func exec_error():
 	clear()
 	error.emit()
 
-
+#清空命令集合
 func clear():
 	if Commands.init.update.is_connected(Callable(now_command, "update")):
 		Commands.init.update.disconnect(Callable(now_command, "update"))

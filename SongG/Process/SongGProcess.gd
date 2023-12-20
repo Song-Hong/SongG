@@ -1,4 +1,4 @@
-extends IProcess
+extends AProcess
 class_name SongGProcess
 
 #软件的入口

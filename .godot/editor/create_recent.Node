@@ -1,4 +1,6 @@
+Blackboard
 Panel
+TextureRect
 Control
 MarginContainer
 PanelContainer
@@ -8,7 +10,5 @@ ScrollContainer
 Button
 VBoxContainer
 Label
-Commands
-TextureRect
 RichTextLabel
 ItemList

@@ -1,15 +1,16 @@
 ##
-# 逻辑层
-# 状态机父类
+# type   : class
+# de_zh  : 状态机
+# author : HongSong
+# time   : 2023/12/20 14:46
 ##
-extends Node
 class_name Finite
 
 signal state_change_start
 signal state_change_end
 
 var own
-var nowState:IState
+var nowState:AState
 var states:Dictionary
 
 #初始化
@@ -17,7 +18,7 @@ func _init(_own):
 	own = _own
 
 #添加状态
-func add_state(state_name:String,state:IState):
+func add_state(state_name:String,state:AState):
 	if states.has(state_name):return
 	states[state_name] = state
 	state.finite = self
@@ -38,9 +39,9 @@ func start(state_name):
 	nowState.on_enter()
 
 #更新
-func _stay(_delta):
+func update(_delta):
 	if nowState != null:
-		nowState.on_stay(_delta)
+		nowState.update(_delta)
 
 #改变状态
 func change_state(state_name:String):
@@ -52,9 +53,9 @@ func change_state(state_name:String):
 	state_change_end.emit()
 
 #改变状态
-func changeState(state:IState):
-	if nowState!=null:nowState.on_exit()
-	if state.finite==null:state.finite = self
+func changeState(state:AState):
+	if nowState     != null : nowState.on_exit()
+	if state.finite == null : state.finite = self
 	nowState = state
 	state_change_start.emit()
 	nowState.on_enter()

@@ -20,12 +20,14 @@ var commands    : Array[ACommand]
 var now_command : ACommand
 
 #快速添加
-func Q(commands_name:String,commands:Array[ACommand],end_call=null):
-	array_name = commands_name
+static func Q(_array_name:String,commands:Array[ACommand],end_call=null):
+	var command_array = CommandArray.new()
+	command_array.array_name = _array_name
 	for command in commands:
-		append(command)
+		command_array.append(command)
 	if end_call != null:
 		end_call.call()
+	command_array.start()
 
 #添加命令
 func append(command:ACommand,command_name=""):
@@ -43,7 +45,7 @@ func exec_command():
 		self.all_finshed.emit(self)
 		return
 	now_command = commands[0]
-	Commands.init.update.connect(Callable(now_command, "update"))
+	Core.init.update.connect(Callable(now_command, "update"))
 	now_command.error.connect(Callable(self, "exec_error"))
 	now_command.finshed.connect(Callable(self, "exec_finshed"))
 	now_command.start()
@@ -52,7 +54,7 @@ func exec_command():
 func exec_finshed():
 	if now_command != null:
 		now_command.exit()
-	Commands.init.update.disconnect(Callable(now_command, "update"))
+	Core.init.update.disconnect(Callable(now_command, "update"))
 	now_command.error.disconnect(Callable(self, "exec_error"))
 	now_command.finshed.disconnect(Callable(self, "exec_finshed"))
 	commands.erase(now_command)
@@ -65,6 +67,6 @@ func exec_error():
 
 #清空命令集合
 func clear():
-	if Commands.init.update.is_connected(Callable(now_command, "update")):
-		Commands.init.update.disconnect(Callable(now_command, "update"))
+	if Core.init.update.is_connected(Callable(now_command, "update")):
+		Core.init.update.disconnect(Callable(now_command, "update"))
 	commands.clear()

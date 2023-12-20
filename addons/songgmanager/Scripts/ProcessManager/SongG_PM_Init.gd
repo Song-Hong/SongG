@@ -5,8 +5,11 @@ class_name SongG_PM_Init
 
 var area
 
-func on_enter():
+func start():
 	pass
 
-func on_stay(_delta):
+func update(_delta):
+	pass
+
+func exit():
 	pass

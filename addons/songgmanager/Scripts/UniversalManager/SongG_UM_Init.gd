@@ -9,11 +9,11 @@ var zoom
 var data
 
 #初始化
-func on_enter():
+func start():
 	load_config()
 	init_scene()
 
-func on_stay(_delta):
+func update(_delta):
 	pass
 
 func load_config():

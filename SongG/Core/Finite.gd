@@ -36,7 +36,7 @@ func exist_state(state_name:String):
 func start(state_name):
 	if !states.has(state_name):return
 	nowState = states[state_name]
-	nowState.on_enter()
+	nowState.start()
 
 #更新
 func update(_delta):
@@ -46,17 +46,17 @@ func update(_delta):
 #改变状态
 func change_state(state_name:String):
 	if !states.has(state_name):return
-	if nowState!=null:nowState.on_exit()
+	if nowState!=null:nowState.exit()
 	nowState = states[state_name]
 	state_change_start.emit()
-	nowState.on_enter()
+	nowState.start()
 	state_change_end.emit()
 
 #改变状态
 func changeState(state:AState):
-	if nowState     != null : nowState.on_exit()
+	if nowState     != null : nowState.exit()
 	if state.finite == null : state.finite = self
 	nowState = state
 	state_change_start.emit()
-	nowState.on_enter()
+	nowState.start()
 	state_change_end.emit()

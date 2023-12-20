@@ -20,3 +20,7 @@ res://SongG/SongGExtend/Tip/Module/TipModule.gd
 res://SongG/Module/ProcessModule.gd
 res://SongG/Module/BlackboardModule.gd
 res://SongG/Module/EventModule.gd
+res://addons/songgmanager/Others/style/SongG.tres
+res://addons/songgmanager/Scripts/ProcessManager/SongG_PM_Init.gd
+res://SongG/Core/Finite.gd
+res://addons/songgmanager/Scripts/UniversalManager/SongG_UM_Init.gd

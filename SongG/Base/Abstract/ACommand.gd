@@ -12,6 +12,13 @@ signal finshed
 #当命令执行错误时
 signal error
 
+#命令名称
+var command_name
+
+#初始化
+func _init(commandName = ""):
+	command_name = commandName
+
 #快捷方法
 func exec_finshed() : finshed.emit() #运行完成
 func exec_error()   : error.emit()   #运行失败

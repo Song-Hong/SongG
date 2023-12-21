@@ -10,57 +10,57 @@ class_name ComponentArray
 #集合名称
 var array_name  : String
 #名称
-var commands    : Dictionary
+var components    : Dictionary
 
 #添加命令
-func append(command:AComponent,command_name=""):
-	command.command_name = command_name
-	commands[command_name] = command
-	command.start()
-	Core.init.update.connect(Callable(command, "update"))
+func append(component:AComponent,component_name=""):
+	component.command_name = component_name
+	components[component_name] = component
+	component.start()
+	Core.init.update.connect(Callable(component, "update"))
 
 #重新开启命令
-func restart(command_name:String):
-	if !commands.has(command_name): return
-	stop(command_name)
-	start(command_name)
+func restart(component_name:String):
+	if !components.has(component_name): return
+	stop(component_name)
+	start(component_name)
 
 #开启
-func start(command_name:String):
-	if !commands.has(command_name): return
-	commands[command_name].start()
-	Nd(command_name)
+func start(component_name:String):
+	if !components.has(component_name): return
+	components[component_name].start()
+	Nd(component_name)
 
 #停止
-func stop(command_name:String):
-	if !commands.has(command_name): return
-	commands[command_name].exit()
-	Up(command_name)
+func stop(component_name:String):
+	if !components.has(component_name): return
+	components[component_name].exit()
+	Up(component_name)
 
 # 挂起
 # 取消绑定update
-func Up(command_name:String):
-	if !commands.has(command_name): return
-	Core.init.update.disconnect(Callable(commands[command_name], "update"))
+func Up(component_name:String):
+	if !components.has(component_name): return
+	Core.init.update.disconnect(Callable(components[component_name], "update"))
 
 # 解除挂起
 # 重新绑定update
-func Nd(command_name:String):
-	if !commands.has(command_name): return
-	Core.init.update.connect(Callable(commands[command_name], "update"))
+func Nd(component_name:String):
+	if !components.has(component_name): return
+	Core.init.update.connect(Callable(components[component_name], "update"))
 
 #删除命令
-func destory(command_name:String):
-	if !commands.has(command_name): return
-	stop(command_name)
-	commands.erase(command_name)
+func destory(component_name:String):
+	if !components.has(component_name): return
+	stop(component_name)
+	components.erase(component_name)
 
 #是否存在命令
-func has(command_name)->bool:
-	return commands.has(command_name)
+func has(component_name)->bool:
+	return components.has(component_name)
 
 #清空全部命令
 func clear():
-	for command_name in commands:
-		stop(command_name)
-	commands.clear()
+	for component_name in components:
+		stop(component_name)
+	components.clear()

@@ -11,7 +11,7 @@ var area
 
 func create(evenState:IEvenState):
 	if !area:
-		area = SongG.get_view("EvenState")
+		area = Blackboard.init.get_data("EvenState")
 	even_states.append(evenState)
 	evenState.start()
 	evenState.connect("destory",Callable(self,"on_destory"))

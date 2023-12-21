@@ -60,7 +60,7 @@ func _init(_title="通知",_content="这是一条通知",AgreeText="",CancelText
 
 
 func showAnimation(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var tip_size   = scene.size
 	scene.position = Vector2(wnd.x/2-tip_size.x/2,wnd.y/2-tip_size.y/2)

@@ -17,6 +17,7 @@ func add_scene(scene_name):
 	var scene = load_scene(scene_name)
 	Blackboard.init.get_data("ViewArea").add_child(scene)
 	scenes[scene_name] = scene
+	return scene
 
 #获取场景
 func get_scene(scene_name):

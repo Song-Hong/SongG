@@ -31,3 +31,4 @@ func try_get_data(data_name,call_data:Callable):
 func del_data(data_name):
 	if data.has(data_name):
 		data.erase(data_name)
+

@@ -47,21 +47,21 @@ func showAnimation(tween:Tween):
 
 #顶部中
 func top(tween):
-	var area = SongG.get_view("Tips")
+	var area = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target = Vector2(wnd.x/2-scene.size.x/2,scene.size.y)
 	up2down(tween,wnd,target)
 
 #底部中
 func bottom(tween): 
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target     = Vector2(wnd.x/2-scene.size.x/2,wnd.y-scene.size.y-10)
 	down2up(tween,wnd,target)
 
 #左侧中
 func left(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size 
 	var target     = Vector2(10,wnd.y/2-scene.size.y/2)
 	scene.position = Vector2(-100,target.y)
@@ -75,7 +75,7 @@ func left(tween):
 
 
 func right(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size 
 	var target     = Vector2(wnd.x-scene.size.x-10,wnd.y/2-scene.size.y/2)
 	scene.position = Vector2(wnd.x+100,target.y)
@@ -88,25 +88,25 @@ func right(tween):
 	tween.tween_property(scene, "position",target, 0.02)
 
 func top_left(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target     = Vector2(10,scene.size.y)
 	up2down(tween,wnd,target)
 
 func top_right(tween): 
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target     = Vector2(wnd.x-scene.size.x-10,scene.size.y)
 	up2down(tween,wnd,target)
 
 func bottom_left(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target     = Vector2(10,wnd.y-scene.size.y-10)
 	down2up(tween,wnd,target)
 
 func bottom_right(tween):
-	var area       = SongG.get_view("Tips")
+	var area       = Blackboard.init.get_data("Tips")
 	var wnd        = area.get_window().size
 	var target     = Vector2(wnd.x-scene.size.x-10,wnd.y-scene.size.y-10)
 	down2up(tween,wnd,target)

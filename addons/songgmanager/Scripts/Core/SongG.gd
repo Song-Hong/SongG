@@ -31,8 +31,6 @@ func init_window():
 	get_child(0).position = Vector2(0,0)
 	get_child(1).position = Vector2(left_panel_width,0)
 	
-	
-
 #显示默认窗口
 func show_default_window():
 	var btn = get_child(0).get_child(1).get_child(0).get_child(1).get_child(0)

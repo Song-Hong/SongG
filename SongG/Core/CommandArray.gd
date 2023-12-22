@@ -26,7 +26,7 @@ static func Q(_array_name:String,commands:Array[ACommand],end_call=null):
 	for command in commands:
 		command_array.append(command)
 	if end_call != null:
-		end_call.call()
+		command_array.all_finshed.connect(end_call)
 	command_array.start()
 
 #添加命令
@@ -42,7 +42,7 @@ func start():
 func exec_command():
 	if commands.size() == 0:
 		now_command = null
-		self.all_finshed.emit(self)
+		self.all_finshed.emit()
 		return
 	now_command = commands[0]
 	Core.init.update.connect(Callable(now_command, "update"))

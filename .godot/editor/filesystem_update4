@@ -1,7 +1,4 @@
 res://addons/songgmanager/Scenes/SongGManager.tscn
 res://addons/songgmanager/Others/style/SongG.tres
 res://addons/songgmanager/Scripts/Core/SongG.gd
-res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
-res://SongG/Core/BlackboardData.gd
-res://SongG/Module/BlackboardModule.gd
-res://SongG/Core/ComponentArray.gd
+res://addons/songgq/songQChat.gd

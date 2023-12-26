@@ -37,13 +37,17 @@ func quitApp():
 
 #最小化app
 func minApp():
-	pass
+	#get_window().MODE_WINDOWED = 
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MINIMIZED)
 
 #最大化app
 func maxApp():
-	pass
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
-#当窗口市区焦点时
+#当窗口失去焦点时
 func _notification(what): 
 	if what == MainLoop.NOTIFICATION_APPLICATION_FOCUS_OUT: 
 		disabled = true

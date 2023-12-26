@@ -23,12 +23,12 @@ config/icon="res://SongG/Others/Logo/logo.svg"
 
 window/size/resizable=false
 window/size/transparent=true
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/songgmanager/plugin.cfg", "res://addons/songgq/plugin.cfg")
+enabled=PackedStringArray("res://addons/songgvisual/plugin.cfg")
 
 [rendering]
 

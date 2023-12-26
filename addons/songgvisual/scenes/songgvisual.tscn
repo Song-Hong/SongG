@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=3 uid="uid://chkxh1w2ppbpj"]
+
+[ext_resource type="Script" path="res://addons/songgvisual/scripts/songgvisualModule.gd" id="1_rco87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iymfb"]
+bg_color = Color(0.109804, 0.121569, 0.141176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_356fu"]
+bg_color = Color(0.117647, 0.133333, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea1ce"]
+bg_color = Color(0.121569, 0.133333, 0.152941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q45on"]
+bg_color = Color(0.109804, 0.121569, 0.141176, 1)
+
+[node name="Songgvisual" type="PanelContainer"]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_iymfb")
+script = ExtResource("1_rco87")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_356fu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="ToolsMargin" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin"]
+layout_mode = 2
+
+[node name="Name" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PluginsName" type="Button" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer/Name"]
+layout_mode = 2
+focus_mode = 0
+text = "SongG Visual"
+flat = true
+
+[node name="Margin" type="MarginContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Tools" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer/Margin"]
+layout_mode = 2
+
+[node name="AddProcess" type="Button" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer/Margin/Tools"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "+"
+
+[node name="ToTop" type="Button" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer/Margin/Tools"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "U"
+
+[node name="ToBottom" type="Button" parent="VBoxContainer/PanelContainer/VBoxContainer/ToolsMargin/VBoxContainer/Margin/Tools"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Area" type="VBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="MultiPage" type="PanelContainer" parent="VBoxContainer/RightContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_356fu")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/RightContainer/MultiPage"]
+layout_mode = 2
+vertical_scroll_mode = 0
+
+[node name="FileArea" type="HBoxContainer" parent="VBoxContainer/RightContainer/MultiPage/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer2" type="HBoxContainer" parent="VBoxContainer/RightContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/RightContainer/PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+
+[node name="Content" type="VBoxContainer" parent="VBoxContainer/RightContainer/PanelContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Commands" type="PanelContainer" parent="VBoxContainer/RightContainer/PanelContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ea1ce")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/RightContainer/PanelContainer2/Commands"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/RightContainer/PanelContainer2/Commands/ScrollContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/RightContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_q45on")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/RightContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/RightContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="FilePath" type="Button" parent="VBoxContainer/RightContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+flat = true
+
+[node name="Gen" type="Button" parent="VBoxContainer/RightContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Generate"

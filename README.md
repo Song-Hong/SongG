@@ -1,4 +1,4 @@
-<img src="./SongG/Others/Logo/logo.svg" width="80" >
+<img src="./SongG/Others/Logo/logo.png" width="80" >
 
 # SongG
 

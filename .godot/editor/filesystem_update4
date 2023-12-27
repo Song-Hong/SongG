@@ -1,13 +1,3 @@
 res://addons/songgvisual/scenes/songgvisual.tscn
-res://addons/songgmanager/scripts/Core/SongG.gd
-res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
-res://SongG/SongGExtend/EvenState/Styles/def.tres
-res://addons/songgmanager/others/style/SongG.tres
-res://addons/songgvisual/codeScripts/codeCommandGenerate.gd
-res://scripts/commands/new/newInitSceneCommand.gd
-res://addons/songgvisual/scripts/songgvisualModule.gd
-res://addons/songgvisual/codeScripts/codeGenerate.gd
-res://scripts/process/loadConfig.gd
-res://SongG/Others/Scenes/core.tscn
-res://addons/songgvisual/scripts/songgvisualShowProcessContentCommand.gd
-res://addons/songgvisual/codeScripts/codeCommandEnum.gd
+res://addons/songgvisual/scripts/songgvisualScanProcessCommand.gd
+res://README.md

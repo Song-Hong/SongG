@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://dttpi6fdee7du"]
+
+[ext_resource type="Theme" uid="uid://twr54gpbt412" path="res://addons/songg/others/styles/main.tres" id="1_8smtj"]
+[ext_resource type="Script" path="res://addons/songg/songgManager.gd" id="2_1iwo1"]
+[ext_resource type="ButtonGroup" uid="uid://bjhch6o2joxbw" path="res://addons/songg/others/group/navigationBar.tres" id="3_5nl16"]
+
+[node name="Main" type="PanelContainer" node_paths=PackedStringArray("area")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_8smtj")
+script = ExtResource("2_1iwo1")
+btns = ExtResource("3_5nl16")
+area = NodePath("Area")
+
+[node name="Area" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="NavigationBar" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="NavigationBar"]
+layout_mode = 2
+theme_type_variation = &"ToolsBar"
+
+[node name="MarginContainer" type="MarginContainer" parent="NavigationBar/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NavigationBar/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Universal" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"Universal"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Process" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"Process"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Button3" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ToolsBarCenter"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Button5" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ToolsBarCenter"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Button6" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ToolsBarCenter"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Button7" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ToolsBarCenter"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="Button4" type="Button" parent="NavigationBar/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(54, 36)
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"ToolsBarRight"
+toggle_mode = true
+button_group = ExtResource("3_5nl16")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "SongG V0.0.2Priview"

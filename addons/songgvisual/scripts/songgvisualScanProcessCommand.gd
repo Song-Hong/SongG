@@ -15,7 +15,7 @@ func start():
 		area.remove_child(item)
 	
 	var dir   = DirAccess.open("res://scripts/process/")
-	if dir  == null: return
+	if dir   == null: return
 	var files = dir.get_files()
 	for i in range(files.size()):
 		var file_name = files[i]

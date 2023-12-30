@@ -1,5 +1,10 @@
-res://addons/songgvisual/scenes/songgvisual.tscn
-res://addons/songgvisual/scripts/songgvisualScanProcessCommand.gd
-res://README.md
-res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
+res://addons/songg/scenes/universal.tscn
+res://addons/songg/others/styles/main.tres
+res://addons/songg/others/styles/universal.tres
 res://SongG/SongGExtend/EvenState/Styles/def.tres
+res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
+res://SongG/Base/Abstract/AGodot.gd
+res://SongG/Process/SongGProcess.gd
+res://SongG/ToolScripts/ItemBind.gd
+res://addons/songg/scenes/main.tscn
+res://addons/songg/plugin.cfg

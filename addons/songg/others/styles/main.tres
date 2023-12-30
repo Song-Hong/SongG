@@ -1,0 +1,74 @@
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://twr54gpbt412"]
+
+[ext_resource type="Texture2D" uid="uid://kk8sdfi6mctw" path="res://addons/songg/others/btn/Center.png" id="1_h6lkn"]
+[ext_resource type="Texture2D" uid="uid://bd2ckm0c5jfxs" path="res://addons/songg/others/btn/Process.png" id="1_qg48g"]
+[ext_resource type="Texture2D" uid="uid://b8orjuxbcke5b" path="res://addons/songg/others/btn/Center_Pressed.png" id="2_8gq6s"]
+[ext_resource type="Texture2D" uid="uid://beht8lesxyds7" path="res://addons/songg/others/btn/Process_Hover.png" id="2_jisam"]
+[ext_resource type="Texture2D" uid="uid://b2trb6vrr6d24" path="res://addons/songg/others/btn/Universal.png" id="3_423kj"]
+[ext_resource type="Texture2D" uid="uid://8hw76jios5fx" path="res://addons/songg/others/btn/Process_Pressed.png" id="3_uj2e8"]
+[ext_resource type="Texture2D" uid="uid://b01w4hxes8dna" path="res://addons/songg/others/btn/Universal_Hover.png" id="4_8f4el"]
+[ext_resource type="Texture2D" uid="uid://bgidi1r1ulp07" path="res://addons/songg/others/btn/Universal_Pressed.png" id="5_atv56"]
+[ext_resource type="Texture2D" uid="uid://b1vuk64h4r40w" path="res://addons/songg/others/btn/Right.png" id="6_2o5n3"]
+[ext_resource type="Texture2D" uid="uid://bob2vjh8lanu7" path="res://addons/songg/others/btn/Right_Pressed.png" id="7_xu4wn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ypv5"]
+texture = ExtResource("2_jisam")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ppsq"]
+texture = ExtResource("1_qg48g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24xf7"]
+texture = ExtResource("3_uj2e8")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffofe"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_offset = Vector2(0, 12)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnwer"]
+texture = ExtResource("1_h6lkn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1gc7d"]
+texture = ExtResource("2_8gq6s")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ka6bo"]
+texture = ExtResource("6_2o5n3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4hux"]
+texture = ExtResource("7_xu4wn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_el32r"]
+texture = ExtResource("4_8f4el")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78kgt"]
+texture = ExtResource("3_423kj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cajtw"]
+texture = ExtResource("5_atv56")
+
+[resource]
+Process/base_type = &"Button"
+Process/styles/hover = SubResource("StyleBoxTexture_3ypv5")
+Process/styles/normal = SubResource("StyleBoxTexture_6ppsq")
+Process/styles/pressed = SubResource("StyleBoxTexture_24xf7")
+ToolsBar/base_type = &"PanelContainer"
+ToolsBar/styles/panel = SubResource("StyleBoxFlat_ffofe")
+ToolsBarCenter/base_type = &"Button"
+ToolsBarCenter/styles/disabled = SubResource("StyleBoxTexture_tnwer")
+ToolsBarCenter/styles/focus = SubResource("StyleBoxTexture_tnwer")
+ToolsBarCenter/styles/hover = SubResource("StyleBoxTexture_tnwer")
+ToolsBarCenter/styles/normal = SubResource("StyleBoxTexture_tnwer")
+ToolsBarCenter/styles/pressed = SubResource("StyleBoxTexture_1gc7d")
+ToolsBarRight/base_type = &"Button"
+ToolsBarRight/styles/disabled = SubResource("StyleBoxTexture_ka6bo")
+ToolsBarRight/styles/focus = SubResource("StyleBoxTexture_ka6bo")
+ToolsBarRight/styles/hover = SubResource("StyleBoxTexture_ka6bo")
+ToolsBarRight/styles/normal = SubResource("StyleBoxTexture_ka6bo")
+ToolsBarRight/styles/pressed = SubResource("StyleBoxTexture_p4hux")
+Universal/base_type = &"Button"
+Universal/styles/hover = SubResource("StyleBoxTexture_el32r")
+Universal/styles/normal = SubResource("StyleBoxTexture_78kgt")
+Universal/styles/pressed = SubResource("StyleBoxTexture_cajtw")

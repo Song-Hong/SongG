@@ -6,8 +6,17 @@
 @tool
 extends Control
 
+#黑板数据
+var data
+
+#初始化
 func _ready():
-	create_card("初始化","初始化文件夹","取消","执行")
+	data = BlackboardData.new()
+	universalModuleInitCommand.new(self,data).start()
+
+#初始化框架
+func init_songg():
+	universalModuleInitSongGCommand.new(self,data).start()
 
 func create_card(title:String,content:String,cancel_text:String,agree_text:String):
 	var card = load("res://addons/songg/scenes/card.tscn").instantiate()

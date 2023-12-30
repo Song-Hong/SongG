@@ -1,10 +1,8 @@
-res://addons/songg/scenes/universal.tscn
+res://addons/songg/scenes/main.tscn
 res://addons/songg/others/styles/main.tres
 res://addons/songg/others/styles/universal.tres
-res://SongG/SongGExtend/EvenState/Styles/def.tres
-res://SongG/SongGExtend/Tip/Styles/TipPanel.tres
-res://SongG/Base/Abstract/AGodot.gd
-res://SongG/Process/SongGProcess.gd
-res://SongG/ToolScripts/ItemBind.gd
-res://addons/songg/scenes/main.tscn
-res://addons/songg/plugin.cfg
+res://songgconfig/core.json
+res://addons/songg/config/universal.json
+res://addons/songg/scripts/Module/Universal/universalModule.gd
+res://addons/songg/scripts/Module/Universal/universalModuleInitCommand.gd
+res://addons/songg/scripts/Module/Universal/universalModuleInitSongGCommand.gd
